@@ -274,6 +274,30 @@ def _copy_simulide_efuse(output_path):
     _log(f"efuse copiado: '{efuse_src}' -> '{efuse_dst}'")
 
 
+def _copy_to_project_simulide_folder(env, merged_bin_path, merged_efuse_path):
+    """
+    Copia o merged.bin (e o merged.efuse, se existir) para a pasta
+    "simulIDE" na raiz do projeto, caso ela exista. Isso permite manter
+    os arquivos prontos para uso junto dos projetos ".sim2" que ficam
+    nessa pasta, sem precisar apontar para o caminho dentro de ".pio".
+    """
+    project_dir = Path(env.subst("$PROJECT_DIR"))
+    simulide_folder = project_dir / "simulIDE"
+
+    if not simulide_folder.is_dir():
+        _log(f"pasta '{simulide_folder}' nao encontrada; copia para a pasta simulIDE do projeto ignorada.")
+        return
+
+    dst_bin = simulide_folder / merged_bin_path.name
+    shutil.copyfile(merged_bin_path, dst_bin)
+    _log(f"merged.bin copiado para a pasta simulIDE do projeto: '{dst_bin}'")
+
+    if merged_efuse_path.is_file():
+        dst_efuse = simulide_folder / merged_efuse_path.name
+        shutil.copyfile(merged_efuse_path, dst_efuse)
+        _log(f"merged.efuse copiado para a pasta simulIDE do projeto: '{dst_efuse}'")
+
+
 def after_build(source, target, env):
     """Ponto de entrada: roda automaticamente depois que o PlatformIO
     termina de gerar o firmware.bin do ambiente ativo."""
@@ -320,6 +344,10 @@ def after_build(source, target, env):
 
     # Passo 8: copiar o esp32.efuse do SimulIDE para uso no simulador.
     _copy_simulide_efuse(output_path)
+
+    # Passo 9: copiar merged.bin/merged.efuse para a pasta "simulIDE" do
+    # projeto, se ela existir.
+    _copy_to_project_simulide_folder(env, output_path, output_path.with_suffix(".efuse"))
 
     _log("-" * 70)
 
