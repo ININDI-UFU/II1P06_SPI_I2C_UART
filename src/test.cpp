@@ -6,12 +6,15 @@
 #define BLINK  27   // LED que pisca
 #define PWMPIN 17   // saída PWM
 
-// Configuração do PWM gerado pelo LEDC
-// ledcSetup(canal, freq, resolução) + ledcAttachPin(pino, canal) + ledcWrite(canal, duty)
-#define PWM_CHANNEL 0              // canal do LEDC usado para o pino PWMPIN
-#define PWM_FREQ_HZ 10             // frequência do PWM: 10 Hz
+// Configuração do PWM gerado pelo LEDC, via analogWrite() (em vez de
+// ledcSetup/ledcAttachPin/ledcWrite manuais com canal fixo): no SimulIDE,
+// ledcWrite() sozinho (sem repetir o ledcAttachPin) não atualiza o sinal
+// visto no analisador - o exemplo "Devkitc_test" do próprio SimulIDE usa
+// analogWrite() e funciona corretamente, então seguimos o mesmo caminho.
+#define PWM_FREQ_HZ 1000           // frequência do PWM: 1 kHz (10 Hz dava só 1 pulso a cada 100 ms,
+                                   // período longo demais para aparecer bem no analisador de sinal)
 #define PWM_RES_BITS 12              // resolução: 12 bits -> duty vai de 0 a 4095
-#define PWM_DUTY_50PCT (4096 / 2)    // 50% de 4096
+#define PWM_DUTY_MAX ((1 << PWM_RES_BITS) - 1)  // duty máximo (100%) para a resolução acima
 
 LiquidCrystal_AIP31068_I2C lcd(0x3E, 16, 2);
 Adafruit_PCD8544 display = Adafruit_PCD8544(18, 23, 16, 5, 19); // Software SPI (CLK, DIN, DC, CS, RST)
@@ -24,11 +27,12 @@ void setup()
   pinMode(BLINK, OUTPUT);
   pinMode(BUTPIN, OUTPUT);
 
-  // Configura o canal do LEDC (10 Hz, 8 bits) e liga o pino PWMPIN a ele,
-  // já fixando o duty em 50%. Como o duty não muda mais, basta fazer isso
-  ledcSetup(PWM_CHANNEL, PWM_FREQ_HZ, PWM_RES_BITS);
-  ledcAttachPin(PWMPIN, PWM_CHANNEL);
-  ledcWrite(PWM_CHANNEL, PWM_DUTY_50PCT);
+  // Configura o PWM (1 kHz, 12 bits) no pino PWMPIN. O duty começa em 0
+  // e é atualizado em rampa no loop().
+  pinMode(PWMPIN, OUTPUT);
+  analogWriteFrequency(PWM_FREQ_HZ);
+  analogWriteResolution(PWM_RES_BITS);
+  analogWrite(PWMPIN, 0);
 
   lcd.init();
   lcd.setCursor(3, 0);
@@ -72,5 +76,25 @@ void loop()
     lastBlink = millis();
     blinkState = !blinkState;
     digitalWrite(BLINK, blinkState ? HIGH : LOW);
+  }
+
+  // --- Tarefa 3: rampa de PWM, subindo de 0% a 100% e depois descendo de
+  // volta a 0%, repetindo (passo de 1% do duty máximo a cada 20 ms) ---
+  static uint32_t lastPwm = 0;
+  static int pwmDuty = 0;
+  static int pwmStep = PWM_DUTY_MAX / 100;
+  if (millis() - lastPwm > 20) {
+    lastPwm = millis();
+
+    pwmDuty += pwmStep;
+    if (pwmDuty >= PWM_DUTY_MAX) {
+      pwmDuty = PWM_DUTY_MAX;
+      pwmStep = -pwmStep;
+    } else if (pwmDuty <= 0) {
+      pwmDuty = 0;
+      pwmStep = -pwmStep;
+    }
+
+    analogWrite(PWMPIN, pwmDuty);
   }
 }

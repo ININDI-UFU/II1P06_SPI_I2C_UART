@@ -1,6 +1,6 @@
 <circuit version="2.0.0-" rev="260501" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" anicurr="0" ansi="0" width="3200" height="2400" >
 
-<item itemtype="Fixed Voltage" CircId="Fixed Voltage-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-588,-60" rotation="-180" hflip="-1" vflip="1" label="Button" idLabPos="-55.4674,4.92715" labelrot="180" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Small="true" Out="false" />
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-588,-60" rotation="-180" hflip="-1" vflip="1" label="Button" idLabPos="-55.4674,4.92715" labelrot="180" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Small="true" Out="true" />
 
 <item itemtype="Probe" CircId="Probe-6" mainComp="false" Show_id="true" Show_Val="false" Pos="-588,-60" rotation="-225" hflip="1" vflip="1" label="Button Out" idLabPos="12.858,34.0279" labelrot="225" valLabPos="-1.71335,17.3666" valLabRot="225" ShowVolt="false" Threshold="2.5 V" Small="true" Pause="false" />
 
@@ -10,7 +10,7 @@
 
 <item itemtype="Pcd8544" CircId="Pcd8544-19" mainComp="false" Show_id="false" Show_Val="false" Pos="-260,-76" rotation="0" hflip="1" vflip="1" label="Pcd8544-19" idLabPos="-32,-66" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="LAnalizer" CircId="LAnalizer-31" mainComp="false" Show_id="false" Show_Val="false" Pos="-508,68" rotation="0" hflip="1" vflip="1" label="LAnalizer-31" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="300 _px" Basic_Y="135 _px" BufferSize="200000" connectGnd="true" InputImped="10 MΩ" TestTime="0 ns" DoTest="false" TimDiv="20675844505" TimPos="43167194866" VolDiv="0.15" Tunnels="TX,SCL,SDA,CK,DI,DC,CS,PWM," Trigger="7" TimeStep="1000 _ps" AutoExport="false" TresholdR="2.5 V" Bus="false,false,false,false,false,false,false,false," TresholdF="2.5 V" />
+<item itemtype="LAnalizer" CircId="LAnalizer-31" mainComp="false" Show_id="false" Show_Val="false" Pos="-508,68" rotation="0" hflip="1" vflip="1" label="LAnalizer-31" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="300 _px" Basic_Y="135 _px" BufferSize="200000" connectGnd="true" InputImped="10 MΩ" TestTime="0 ns" DoTest="false" TimDiv="49991127" TimPos="-35491484305" VolDiv="0.15" Tunnels="TX,SCL,SDA,CK,DI,DC,CS,PWM," Trigger="7" TimeStep="1000 _ps" AutoExport="false" TresholdR="2.5 V" Bus="false,false,false,false,false,false,false,false," TresholdF="2.5 V" />
 
 <item itemtype="Subcircuit" CircId="devkitC-46" mainComp="false" Show_id="false" Show_Val="false" Pos="-556,-196" rotation="0" hflip="1" vflip="1" label="devkitC-46" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
 <mainCompProps MainCompId="Esp32-2" Program="merged.bin" />

@@ -353,6 +353,8 @@ def after_build(source, target, env):
 
 
 # Registra a acao para rodar depois que o PlatformIO gerar o
-# "${PROGNAME}.bin" do ambiente ativo - ou seja, apos cada compilacao
-# que efetivamente (re)gera o firmware (ex.: "pio run").
-env.AddPostAction("$BUILD_DIR/${PROGNAME}.bin", after_build)
+# "${PROGNAME}.bin" do ambiente ativo. AlwaysBuild forca esse alvo a ser
+# tratado como "fora de data" em todo "pio run"/Build, mesmo quando nada
+# mudou no codigo-fonte (build incremental) - sem isso, o SCons pula o
+# alvo e o post-action (e portanto o merged.bin) nunca e regenerado.
+env.AlwaysBuild(env.AddPostAction("$BUILD_DIR/${PROGNAME}.bin", after_build))
