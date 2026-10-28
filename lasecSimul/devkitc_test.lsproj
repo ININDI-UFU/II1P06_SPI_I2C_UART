@@ -1,0 +1,1111 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "id": "Fixed Voltage-3",
+      "typeId": "sources.fixed_volt",
+      "properties": {
+        "voltage": 5,
+        "out": true,
+        "small": true,
+        "__ui_idLabelX": 0,
+        "__ui_idLabelY": 24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -15.999999999999998,
+        "__ui_valueLabelY": -8.000000000000002,
+        "__ui_valueLabelRotation": 180
+      },
+      "label": "Button",
+      "showId": true,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -612,
+        "y": -66.4,
+        "rotation": 180
+      }
+    },
+    {
+      "id": "Probe-6",
+      "typeId": "meters.probe",
+      "properties": {
+        "threshold": 2.5,
+        "showVolt": false,
+        "negativeThreshold": -2.5,
+        "small": true,
+        "pauseOnChange": false,
+        "__ui_idLabelX": -68,
+        "__ui_idLabelY": 3,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -11.068519222608323,
+        "__ui_valueLabelY": -13.491562029700269,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Button Out",
+      "showId": true,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -639.9999999999998,
+        "y": -76,
+        "rotation": 180
+      }
+    },
+    {
+      "id": "SerialTerm-11",
+      "typeId": "peripherals.serialterm",
+      "properties": {
+        "baudrate": 115200,
+        "data_bits": 8,
+        "stop_bits": 1,
+        "__ui_simulideRaw_serialmon": "false",
+        "__ui_idLabelX": -20,
+        "__ui_idLabelY": -32,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "SerialTerm-11",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -388,
+        "y": -44,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Aip31068_i2c-13",
+      "typeId": "outputs.aip31068_i2c",
+      "properties": {
+        "frequency": 100,
+        "rows": 2,
+        "columns": 16,
+        "__ui_idLabelX": 70,
+        "__ui_idLabelY": -82,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0,
+        "i2cAddress": 62
+      },
+      "label": "Aip31068_i2c-13",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -380,
+        "y": -164,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Pcd8544-19",
+      "typeId": "outputs.pcd8544",
+      "properties": {
+        "__ui_idLabelX": -32,
+        "__ui_idLabelY": -66,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Pcd8544-19",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -308,
+        "y": -76,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "LAnalizer-31",
+      "typeId": "meters.logic_analyzer",
+      "properties": {
+        "thresholdRising": 2.5,
+        "thresholdFalling": 2.5,
+        "tunnels": "TX,SCL,SDA,CK,DI,DC,CS,PWM,",
+        "__ui_simulideRaw_basicx": "300 _px",
+        "__ui_simulideRaw_basicy": "135 _px",
+        "__ui_simulideRaw_buffersize": "200000",
+        "__ui_simulideRaw_connectgnd": "true",
+        "__ui_simulideRaw_inputimped": "10 MΩ",
+        "__ui_simulideRaw_testtime": "0 ns",
+        "__ui_simulideRaw_dotest": "false",
+        "__ui_simulideRaw_timdiv": "49991127",
+        "__ui_simulideRaw_timpos": "-35491484305",
+        "__ui_simulideRaw_voldiv": "0.15",
+        "__ui_simulideRaw_trigger": "7",
+        "__ui_simulideRaw_timestep": "1000 _ps",
+        "__ui_simulideRaw_autoexport": "false",
+        "__ui_simulideRaw_bus": "false,false,false,false,false,false,false,false,",
+        "__ui_instrumentView": "{\"version\":1,\"kind\":\"logic\",\"width\":820,\"height\":430,\"timeZeroRatio\":0.5,\"timeDivMs\":0.049991127,\"timePosMs\":-35.491484305,\"hiddenChannels\":[false,false,false,false,false,false,false,false],\"expandedBusChannels\":[],\"triggerChannel\":7,\"triggerCondition\":\"\",\"thresholdUp\":2.5,\"thresholdDown\":2.5}",
+        "sampleIntervalNs": 1,
+        "__ui_idLabelX": -90,
+        "__ui_idLabelY": -100,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "LAnalizer-31",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -564,
+        "y": 12,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "devkitC-46",
+      "typeId": "subcircuits.esp32_devkitc_v4",
+      "properties": {
+        "__ui_idLabelX": 0,
+        "__ui_idLabelY": -20,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0,
+        "__ui_simulideProgram": "merged.bin",
+        "__ui_simulideMainCompId": "Esp32-2",
+        "__ui_exposedMcu_mcu1_firmwarePath": "c:\\Prof_Josue\\0II1\\II1P06_SPI_I2C_UART\\sourcecode\\merged.bin"
+      },
+      "label": "devkitC-46",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -556,
+        "y": -196,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Probe-60",
+      "typeId": "meters.probe",
+      "properties": {
+        "threshold": 2.5,
+        "showVolt": false,
+        "negativeThreshold": -2.5,
+        "small": false,
+        "pauseOnChange": false,
+        "__ui_idLabelX": -28.405045085688563,
+        "__ui_idLabelY": -5.200487532914584,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -11.31370849898476,
+        "__ui_valueLabelY": -11.313708498984761,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Blink",
+      "showId": true,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -644,
+        "y": -112.80000000000001,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-62",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "PWM",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-62",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -467.20000000000033,
+        "y": -95.99999999999999,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-64",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "TX",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-64",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460,
+        "y": -156,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-66",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "SDA",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-66",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -468,
+        "y": -139.2,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-68",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "SCL",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-68",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -465.6000000000004,
+        "y": -164.8,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-70",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "DI",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-70",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460,
+        "y": -172,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-72",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "SDA",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-72",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -388,
+        "y": -188,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-73",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "SCL",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-73",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -380,
+        "y": -188,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-74",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "RX",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-74",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -420,
+        "y": -42.400000000000034,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-75",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "RX",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-75",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460,
+        "y": -148,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-76",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "TX",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-76",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -420,
+        "y": -26.40000000000001,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-77",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "CK",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-77",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -244,
+        "y": 24,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-78",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "DI",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-78",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -260,
+        "y": 24,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-79",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "DC",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-79",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -276,
+        "y": 24,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-80",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "CS",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-80",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -292,
+        "y": 24,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-81",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "RS",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -24,
+        "__ui_idLabelY": -16,
+        "__ui_idLabelRotation": 270,
+        "__ui_valueLabelX": 20,
+        "__ui_valueLabelY": -15.999999999999998,
+        "__ui_valueLabelRotation": 270
+      },
+      "label": "Tunnel-81",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -308,
+        "y": 24,
+        "rotation": 270
+      }
+    },
+    {
+      "id": "Tunnel-82",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "CS",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-82",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460,
+        "y": -104.79999999999998,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-83",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "CK",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-83",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460,
+        "y": -112.79999999999998,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-84",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "RS",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-84",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460,
+        "y": -121.59999999999998,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-85",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "DC",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": 16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": 16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-85",
+      "showId": false,
+      "showValue": false,
+      "flipH": true,
+      "flipV": false,
+      "visual": {
+        "x": -460.80000000000007,
+        "y": -87.99999999999999,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Tunnel-86",
+      "typeId": "connectors.tunnel",
+      "properties": {
+        "name": "PWM",
+        "__ui_simulideRaw_isbus": "false",
+        "__ui_idLabelX": -16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Tunnel-86",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -396,
+        "y": -72.00000000000001,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Led-87",
+      "typeId": "outputs.led",
+      "properties": {
+        "color": "Yellow",
+        "threshold": 2.4,
+        "resistance": 10,
+        "__ui_simulideRaw_maxcurrent": "30 mA",
+        "__ui_idLabelX": -16,
+        "__ui_idLabelY": -24,
+        "__ui_idLabelRotation": 0,
+        "__ui_valueLabelX": -16,
+        "__ui_valueLabelY": 20,
+        "__ui_valueLabelRotation": 0
+      },
+      "label": "Led-87",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -372,
+        "y": -76,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "Ground-88",
+      "typeId": "other.ground",
+      "properties": {},
+      "label": "Ground-88",
+      "showId": false,
+      "showValue": false,
+      "flipH": false,
+      "flipV": false,
+      "visual": {
+        "x": -332,
+        "y": -74.80000000000001,
+        "rotation": 270
+      }
+    }
+  ],
+  "topology": {
+    "revision": 270,
+    "nodes": [],
+    "conductors": [
+      {
+        "id": "Connector-215",
+        "from": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G27"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Probe-60",
+          "pinId": "pin-1"
+        },
+        "vertices": [
+          {
+            "x": -617.221825406948,
+            "y": -91.22187553105444
+          }
+        ]
+      },
+      {
+        "id": "Connector-223",
+        "from": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G17"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Tunnel-62",
+          "pinId": "pin"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-239",
+        "from": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G23"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Tunnel-70",
+          "pinId": "pin"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-240",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-66",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G21"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-241",
+        "from": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G22"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Tunnel-68",
+          "pinId": "pin"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-242",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-72",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Aip31068_i2c-13",
+          "pinId": "sda"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-243",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-73",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Aip31068_i2c-13",
+          "pinId": "scl"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-244",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-64",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "TX"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-245",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-75",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "RX"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-246",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-76",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "SerialTerm-11",
+          "pinId": "rx"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-247",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-74",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "SerialTerm-11",
+          "pinId": "tx"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-255",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-82",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G05"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-256",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-83",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G18"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-257",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-84",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G19"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-258",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-85",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G16"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-259",
+        "from": {
+          "kind": "port",
+          "componentId": "Fixed Voltage-3",
+          "pinId": "out"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G13"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-260",
+        "from": {
+          "kind": "port",
+          "componentId": "Probe-6",
+          "pinId": "pin-1"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "devkitC-46",
+          "pinId": "G12"
+        },
+        "vertices": [
+          {
+            "x": -616.4436508138957,
+            "y": -74.853499432563
+          }
+        ]
+      },
+      {
+        "id": "Connector-261",
+        "from": {
+          "kind": "port",
+          "componentId": "Led-87",
+          "pinId": "anode"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Tunnel-86",
+          "pinId": "pin"
+        },
+        "vertices": []
+      },
+      {
+        "id": "wire-1793180420816-342277",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-81",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Pcd8544-19",
+          "pinId": "rst"
+        },
+        "vertices": []
+      },
+      {
+        "id": "wire-1793180425240-265430",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-80",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Pcd8544-19",
+          "pinId": "ce"
+        },
+        "vertices": []
+      },
+      {
+        "id": "wire-1793180432847-37299",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-79",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Pcd8544-19",
+          "pinId": "dc"
+        },
+        "vertices": []
+      },
+      {
+        "id": "wire-1793180437359-56053",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-78",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Pcd8544-19",
+          "pinId": "din"
+        },
+        "vertices": []
+      },
+      {
+        "id": "wire-1793180441025-919056",
+        "from": {
+          "kind": "port",
+          "componentId": "Tunnel-77",
+          "pinId": "pin"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Pcd8544-19",
+          "pinId": "clk"
+        },
+        "vertices": []
+      },
+      {
+        "id": "Connector-262",
+        "from": {
+          "kind": "port",
+          "componentId": "Led-87",
+          "pinId": "cathode"
+        },
+        "to": {
+          "kind": "port",
+          "componentId": "Ground-88",
+          "pinId": "pin"
+        },
+        "vertices": [
+          {
+            "x": -332,
+            "y": -66
+          }
+        ]
+      }
+    ]
+  },
+  "visual": {
+    "viewport": {
+      "x": 1148.3152735187018,
+      "y": 377.28265939262974,
+      "zoom": 1.4859942891369466
+    },
+    "wireRoutes": "explicit"
+  },
+  "simulationSettings": {}
+}
